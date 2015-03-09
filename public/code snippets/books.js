@@ -1,5 +1,6 @@
 (function(){
-	
+	'use strict';
+
 	var books = [
 		{
 			bookID: 09809,
@@ -30,12 +31,12 @@
 		},
 		{
 			bookID: 09353,
-			author: 'Jesse Cravens, Thomas Q Brady',
-			title: 'Building Web Apps with Ember.js',
-			description: "Build ambitious JavaScript App",
+			author: 'Kyle Thompson',
+			title: 'This & Object prototype',
+			description: "The 'this' keyword and prototypes for mastering JS",
 			price: 9.99,
-			category: 'Web Frameworks',
-			cover: 'images/emberjs.jpg'
+			category: 'Programming language',
+			cover: 'images/objectandprototype.jpg'
 		},
 		{
 			bookID: 09546,
@@ -43,17 +44,12 @@
 			title: 'Make: JavaScript Robotics',
 			description: 'Building NodeBots with Raspberry Pi, Arduino, and BeagleBone',
 			price: 9.99,
-			category: 'Robotic & Programming',
+			category: 'Robotic & Programming,
 			cover: 'images/robot.jpg'
 		}
 	];
 
-
-	function BookController($scope){
-		$scope.books = books;
+	function getBooks(){
+		return books;
 	}
-
-	// Create Module bookstore
-	angular.module('bookstore', [])
-	.controller('BookController', BookController);
 })();
