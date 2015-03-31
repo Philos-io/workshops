@@ -49,11 +49,24 @@
 	];
 
 
-	function BookController($scope){
-		$scope.books = books;
+	function BookController($scop){
+		$scop.books = books;
 	}
 
 	// Create Module bookstore
 	angular.module('bookstore', [])
-	.controller('BookController', BookController);
+	.controller('BookControler', BookController)
+	.config(function($routeProvider){
+		
+		$routeProvider
+			.when('/', {
+				templateUrl: 'templates/book.html',
+				controller: 'BookController'
+			})
+			.when('/addBook', {
+				templateUrl: 'templates/addBook.html',
+				controller: 'BookController'	
+			})
+			.otherwise('/');
+	});
 })();

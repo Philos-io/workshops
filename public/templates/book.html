@@ -1,26 +1,25 @@
-<div>
-		<div class="row">
-			<div class="col-lg-offset-1 col-lg-2 col-md-2">
-				<a href="#/addNewBook" class="btn btn-success">
-					<i class="fa fa-plus">Add Book</i>
-				</a>
-			</div>
-
-			<form class="col-md-8 col-lg-6">
-				<input type="search" class="form-control" placeholder="search for books">
-			</form>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-offset-1 col-lg-2 col-md-2">
+			<a href="#/addBook" class="btn btn-success">
+				<i class="fa fa-plus">Add Book</i>
+			</a>
 		</div>
-		<div id="books" class="row">
-		  <div class="col-sm-4 col-md-3 animated fadeInLeft">
-		    <div class="thumbnail">
-		      <img src="cover" alt="title">
-		      <div class="caption">
-		        <h3>title</h3>
-		        <p>description</p>
-		        <p><a href="#/add-link-to-the-book-detail" class="btn btn-success">
-		      		More detail</a></p>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+		<form class="col-md-8 col-lg-6">
+			<input type="search" ng-model="searchTerm" class="form-control" placeholder="search for books">
+		</form>
 	</div>
+	<div id="books" class="row">
+	  <div class="col-sm-4 col-md-3 animated fadeInUpSmall book" ng-repeat="book in books | filter:searchTerm">
+	    <div class="thumbnail">
+	      <img ng-src="{{book.cover}}" alt="{{book.title}}">
+	      <div class="caption">
+	        <h3>{{book.title}}</h3>
+	        <p>{{book.description}}</p>
+	        <p><a href="#/add-link-to-the-book-detail" class="btn btn-success">
+	      		More detail</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>	

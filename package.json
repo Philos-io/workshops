@@ -1,0 +1,26 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Philos-io/workshops"
+  },
+  "author": "Philos Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Philos-io/workshops/issues"
+  },
+  "homepage": "https://github.com/Philos-io/workshops",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-jshint": "^1.9.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-watch": "^4.2.2"
+  }
+}
